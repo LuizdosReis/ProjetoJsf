@@ -1,7 +1,15 @@
 package br.com.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Livro {
 
+	@Id @GeneratedValue
+	private int id;
+	
 	private String titulo;
 	private String isbn;
 	private Double preco;
@@ -39,4 +47,13 @@ public class Livro {
 		this.dataLancamento = dataLancamento;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
 }
