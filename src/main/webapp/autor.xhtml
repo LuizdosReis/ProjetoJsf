@@ -6,13 +6,13 @@
 <h:body>
 	<h1>Novo Autor</h1>
 	<h:form>
-		<fielset>
+		<fieldset>
 			<legend>Dados do Autor</legend>
 			<h:panelGrid colums="2">
 				<h:outputLabel value="Nome:" for="nome" />
 				<h:inputText id="nome" value="#{autorBean.autor.nome}" />
 			</h:panelGrid>
-		</fielset>	
+		</fieldset>	
 		
 		<h:commandButton value = "Gravar" action = "#{autorBean.gravar}"/>
 	</h:form>
