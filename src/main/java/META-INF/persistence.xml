@@ -12,6 +12,7 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 		
 		<!-- AQUI DEVE FICAR TODAS AS ENTIDADES GERENCIADAS -->
 		<class>br.com.model.Livro</class>
+		<class>br.com.model.Autor</class>
 		
 		<properties>
 			<!-- Propriedades JDBC -->
