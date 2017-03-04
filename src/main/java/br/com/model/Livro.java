@@ -1,8 +1,14 @@
 package br.com.model;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Livro {
@@ -14,6 +20,13 @@ public class Livro {
 	private String isbn;
 	private Double preco;
 	private String dataLancamento;
+	
+	@ManyToMany
+	private List<Autor> autores;
+	
+	public Livro() {
+		autores = new ArrayList<Autor>();
+	}
 
 	public String getTitulo() {
 		return titulo;
@@ -54,6 +67,16 @@ public class Livro {
 	public void setId(int id) {
 		this.id = id;
 	}
+
+	public void adicionaAutor(Autor autor) {
+		autores.add(autor);
+	}
+
+	public List<Autor> getAutores() {
+		return Collections.unmodifiableList(autores);
+	}
+	
+	
 
 	
 }
